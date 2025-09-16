@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chinese Cuisine Showcase</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Noto Serif SC', serif;
+      background: linear-gradient(to bottom right, #8B0000, #B22222);
+      color: #fff5e1;
+      overflow-x: hidden;
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: #A52A2A;
+      border-bottom: 5px solid gold;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      color: gold;
+      text-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
+    }
+
+    header p {
+      color: #ffe4b5;
+      font-size: 1rem;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    .card {
+      border: 2px solid gold;
+      border-radius: 1rem;
+      overflow: hidden;
+      background: #8B0000;
+      box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
+      transform: translateY(40px);
+      opacity: 0;
+      transition: transform 0.8s ease, opacity 0.8s ease;
+    }
+
+    .card.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    .card img {
+      width: 100%;
+      display: block;
+      border-bottom: 3px solid gold;
+      transition: transform 0.6s ease;
+    }
+
+    .card img:hover {
+      transform: scale(1.05);
+    }
+
+    .details {
+      padding: 1.2rem;
+      transform: translateX(-40px);
+      opacity: 0;
+      transition: transform 0.6s ease, opacity 0.6s ease;
+    }
+
+    .card.show .details {
+      transform: translateX(0);
+      opacity: 1;
+    }
+
+    .details h2 {
+      font-size: 1.6rem;
+      margin: 0;
+      color: gold;
+    }
+
+    .details .origin {
+      font-size: 0.9rem;
+      color: #ffe4b5;
+      font-style: italic;
+    }
+
+    .details p {
+      margin: 0.8rem 0;
+      color: #fff5e1;
+      font-size: 1rem;
+    }
+
+    .discovered {
+      font-size: 0.85rem;
+      color: #ffd700;
+      margin-top: 0.5rem;
+    }
+
+    button {
+      margin-top: 0.8rem;
+      padding: 0.5rem 1.2rem;
+      border: 1px solid gold;
+      background: #B22222;
+      color: #fff5e1;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    button:hover {
+      background: gold;
+      color: #8B0000;
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #A52A2A;
+      color: #ffe4b5;
+      font-size: 0.9rem;
+      border-top: 5px solid gold;
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>Traditional Chinese Cuisine</h1>
+    <p>A cultural journey through flavors, heritage, and history.</p>
+  </header>
+
+  <main class="gallery">
+    <div class="card">
+      <img src="https://th.bing.com/th/id/R.73facbfa3cf4e9bb9fe1411417d219ce?rik=o5tvC6SYWKU%2f3g&riu=http%3a%2f%2fwww.unileverfoodsolutions.co.id%2fdam%2fufs-id%2frecipes%2fPeking+Duck.jpg&ehk=JSReZwteTde3yxie3N%2bggh3R5sgQs8QVDOENx6TDeTk%3d&risl=&pid=ImgRaw&r=0" alt="Peking Duck">
+      <div class="details">
+        <h2>Peking Duck</h2>
+        <div class="origin">Beijing (Imperial China)</div>
+        <p>Crispy, lacquered duck with thin pancakes, scallions, and hoisin sauce — a ceremonial dish of imperial courts.</p>
+        <div class="discovered">Discovered: Ming dynasty (14th–17th century)</div>
+        <button onclick="alert('Peking Duck — Ming dynasty (14th–17th century)')">Learn More</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://lostplate.com/wp-content/uploads/2020/07/Mapo-Tofu-Recipe-1.jpg" alt="Mapo Tofu">
+      <div class="details">
+        <h2>Mapo Tofu</h2>
+        <div class="origin">Sichuan</div>
+        <p>Silken tofu in a numbing-spicy sauce with Sichuan peppercorns, fermented bean paste, and minced pork.</p>
+        <div class="discovered">Discovered: 19th century</div>
+        <button onclick="alert('Mapo Tofu — 19th century')">Learn More</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://danielfooddiary.com/wp-content/uploads/2024/02/dintaifung1.jpg" alt="Xiao Long Bao">
+      <div class="details">
+        <h2>Xiao Long Bao</h2>
+        <div class="origin">Shanghai</div>
+        <p>Delicate soup dumplings steamed to perfection with savory broth and seasoned filling.</p>
+        <div class="discovered">Discovered: Early 20th century</div>
+        <button onclick="alert('Xiao Long Bao — Early 20th century')">Learn More</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://www.schweboo.com/beyond/wp-content/uploads/2023/11/chengdu-kung-pao.jpg" alt="Kung Pao Chicken">
+      <div class="details">
+        <h2>Kung Pao Chicken</h2>
+        <div class="origin">Sichuan</div>
+        <p>Diced chicken stir-fried with peanuts and chilies — sweet, savory, and spicy with a crunch.</p>
+        <div class="discovered">Discovered: Qing dynasty (19th century)</div>
+        <button onclick="alert('Kung Pao Chicken — Qing dynasty (19th century)')">Learn More</button>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    Images are samples. Replace with your own licensed images for production.
+  </footer>
+
+  <script>
+    // Animate cards one after another
+    const cards = document.querySelectorAll('.card');
+    window.addEventListener('load', () => {
+      cards.forEach((card, index) => {
+        setTimeout(() => {
+          card.classList.add('show');
+        }, index * 700);
+      });
+    });
+  </script>
+</body>
+</html>
